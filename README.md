@@ -4,9 +4,9 @@
 </p>
 <h3 align="center">基于Electron的鼠标连点器
 </h3>
-<h4 align="center">
-  <a href="https://github.com/ding-jc/mouse-cc/releases">🍕下载</a>
-</h4>
+<h3 align="center">
+  <a href="https://github.com/quanminzhizuoren/mouse-cc/releases">🍕下载</a>
+</h3>
 
 # 🍭鼠标连点器
 

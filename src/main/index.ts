@@ -146,6 +146,7 @@ const setup = (data: Data) => {
       }
     })
   }
+  oldkeypad = keypad
   // 保存新的配置
   fs.writeFileSync(configPath, JSON.stringify(data))
 }

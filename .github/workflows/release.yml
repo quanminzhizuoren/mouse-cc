@@ -1,0 +1,38 @@
+name: mouse-cc
+
+on:
+  push:
+    tags:
+      - '*'
+permissions:
+  contents: write
+
+jobs:
+  win:
+    runs-on: windows-latest
+    steps:
+      - name: 获取仓库内容
+        uses: actions/checkout@v3
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: 安装依赖
+        run: npm install
+
+      - name: 打包
+        run: npm run build:win
+
+      - name: 打包产物
+        run: ls dist
+
+      - name: 发布
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*.exe
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}

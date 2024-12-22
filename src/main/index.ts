@@ -119,7 +119,6 @@ const start = (data: Data) => {
 }
 // 停止点击
 const stop = () => {
-  createWindow()
   if (timer) {
     clearInterval(timer)
     timer = null
